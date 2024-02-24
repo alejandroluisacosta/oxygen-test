@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
 .converter-block
 {
     width: 714px;
@@ -20,7 +22,7 @@ h2
     line-height: 36px;
 }
 
-.dropdown
+#dropdown
 {
     position: relative;
     display: inline-block;
@@ -29,21 +31,81 @@ h2
 
 .dropdown-content {
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
 
-#input
+select
 {
-    
+    width: 254px;
+    background-color: #2E0039;
+    font-family: "Poppins";
+    font-size: 14px;
+    color: #FFFFFF;
+    border-top: #FFFFFF;
+    border-left: #FFFFFF;
+    border-right: #FFFFFF;
+}
+
+.input
+{
+    display: inline-block;
+    margin-left: 80px;
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button { /* Turn off input increase/decrease arrows */
     -webkit-appearance: none;
     margin: 0;
 }
 
+#input.val
+{
+    background-color: #2E0039;
+    display: inline-block;
+}
 
+#input-unit
+{
+    color: #FFFFFF;
+    font-family: "Poppins";
+    font-size: 14px;
+    display: inline-block;
+}
+
+.output
+{
+    color: #FFFFFF;
+    display: inline-block;
+    margin-left: 527px;
+}
+
+#output-val
+{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: inline-block; 
+}
+
+#output-unit
+{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 36px;
+    display: inline-block;
+    margin-left: 9px;
+}
+
+button
+{
+    background-color: #A9B4C2;
+    font-family: "Poppins";
+    border-radius: 21px;
+    color: #2E0039;
+    margin-left: 10px;
+}

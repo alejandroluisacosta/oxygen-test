@@ -1,30 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/styles.css" rel="stylesheet" />
-    <title>unit converter</title>
-</head>
-<body>
-    <div class="converter-block">
-        <h2>convert</h2>
-        <div>
-            <div class="dropdown">
-                <select class="dropbtn">
-                <div class="dropdown-content">
-                  <option value="km-miles">km -> miles</option>
-                  <option value="miles-km">miles -> km</option>
-                  <option value="feet-meter">ft -> m</option>
-                  <option value="meter-feet">m -> ft</option>
-                  <option value="cm-in">cm -> in</option>
-                  <option value="in-cm">in -> cm</option>
-                </select>
-                <input type="number" id="input">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/styles.css" rel="stylesheet" />
+        <title>unit converter</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){ /* Wait for page to load */
+                let button = document.getElementById("button");
+                let convertionType = document.getElementById("convertion_type").value; /* Need to find a way to change this value according to dropdoown */
+                button.addEventListener("click", function(){ /* Convertion occurs when button clicked */
+                    let input = document.getElementById("input-val").value;
+                    let factor = 0;
+                    if (convertionType == "km-miles")
+                    {
+                        factor = 0.621371;
+                    }
+                    else if (convertionType == 'miles-km')
+                    {
+                        factor = 1.60934; 
+                    }
+                    else if (convertionType == 'feet-meter')
+                    {
+                        factor = 0.3048; 
+                    }
+                    else if (convertionType == 'meter-feet')
+                    {
+                        factor = 3.28084; 
+                    }
+                    else if (convertionType == 'cm-in')
+                    {
+                        factor = 0.393701; 
+                    }
+                    else
+                    {
+                        factor = 2.54; 
+                    }
+                    document.getElementById("output-val").innerHTML = (input * factor).toFixed(2); /* Will only work with first dropdown option */
+                    /* Possible solution: Add event listener to dropdown element - Don't know how */
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="converter-block">
+            <h2>convert</h2>
+            <div class="content">
+                <div id="dropdown">
+                    <select id="convertion_type">
+                    <div class="dropdown-content">
+                    <option value="km-miles">km -> miles</option>
+                    <option value="miles-km">miles -> km</option>
+                    <option value="feet-meter">ft -> m</option>
+                    <option value="meter-feet">m -> ft</option>
+                    <option value="cm-in">cm -> in</option>
+                    <option value="in-cm">in -> cm</option>
+                    </div>
+                    </select>
                 </div>
-              </div>
+                <div class="input">
+                    <!-- Check why styles.css not working on following element -->
+                    <input type="number" id="input-val" style="background-color: #2E0039; border-top: 1px; border-left: 1px; border-right: 1px; color: white; font-family: Poppins; text-align: right; font-size: 14px; width: 200px;" placeholder="100">
+                    <p id="input-unit">km</p>
+                    <button id="button">convert</button>
+                </div>
+                <div class="output">
+                    <p id="output-val">62.12</p>
+                    <p id="output-unit">miles</p>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+        </div>
+    </body>
 </html>
