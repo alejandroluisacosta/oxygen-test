@@ -9,14 +9,13 @@
     background: #2E0039;
     box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.2);
     border-radius: 21px;
+    font-family: 'Poppins';
 }
 
 #title-txt
 {
     color: #FFFFFF;
     margin-left: 38px;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 36px;
@@ -33,7 +32,7 @@ select
 {
     width: 254px;
     background-color: #2E0039;
-    font-family: "Poppins";
+
     font-size: 14px;
     color: #FFFFFF;
     border-top: #FFFFFF;
@@ -57,7 +56,7 @@ input::-webkit-inner-spin-button { /* Turn off input increase/decrease arrows */
 {
     background-color: #2E0039;
     display: inline-block;
-    background-color: #2E0039; border-top: 1px;
+    border-top: 1px;
     border-left: 1px;
     border-right: 1px;
     color: white;
@@ -71,7 +70,6 @@ input::-webkit-inner-spin-button { /* Turn off input increase/decrease arrows */
 #input-unit
 {
     color: #FFFFFF;
-    font-family: "Poppins";
     font-size: 14px;
     display: inline-block;
 }
@@ -85,7 +83,6 @@ input::-webkit-inner-spin-button { /* Turn off input increase/decrease arrows */
 
 #output-val
 {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -95,7 +92,6 @@ input::-webkit-inner-spin-button { /* Turn off input increase/decrease arrows */
 
 #output-unit
 {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -107,8 +103,13 @@ input::-webkit-inner-spin-button { /* Turn off input increase/decrease arrows */
 button
 {
     background-color: #A9B4C2;
-    font-family: "Poppins";
+    padding: 5px;
     border-radius: 21px;
     color: #2E0039;
     margin-left: 10px;
+}
+
+button:hover
+{
+    background-color: white;
 }

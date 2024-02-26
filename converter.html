@@ -9,27 +9,59 @@
         <script>
             document.addEventListener("DOMContentLoaded", function(){ /* Wait for page to load */
                 let button = document.getElementById("button");
-                let convertionType = document.getElementById("convertion_type").value; /* Need to find a way to change this value according to dropdoown */
+                let convertionType = document.getElementById("convertion_type");
+                convertionType.addEventListener('change', function(){
+                    if (convertionType.value == 'km-miles')
+                    {
+                        document.getElementById('input-unit').innerHTML = 'km';
+                        document.getElementById('output-unit').innerHTML = 'miles';
+                    }
+                    else if (convertionType.value == 'miles-km')
+                    {
+                        document.getElementById('input-unit').innerHTML = 'miles';
+                        document.getElementById('output-unit').innerHTML = 'km';
+                    }
+                    else if (convertionType.value == 'feet-meter')
+                    {
+                        document.getElementById('input-unit').innerHTML = 'ft';
+                        document.getElementById('output-unit').innerHTML = 'm';
+                    }
+                    else if (convertionType.value == 'meter-feet')
+                    {
+                        document.getElementById('input-unit').innerHTML = 'm';
+                        document.getElementById('output-unit').innerHTML = 'ft';
+                    }
+                    else if (convertionType.value == 'cm-in')
+                    {
+                        document.getElementById('input-unit').innerHTML = 'cm';
+                        document.getElementById('output-unit').innerHTML = 'in';
+                    }
+                    else if (convertionType.value == 'in-cm')
+                    {
+                        document.getElementById('input-unit').innerHTML = 'in';
+                        document.getElementById('output-unit').innerHTML = 'cm';
+                    }
+                });
                 button.addEventListener("click", function(){ /* Convertion occurs when button clicked */
                     let input = document.getElementById("input-val").value;
                     let factor = 0;
-                    if (convertionType == "km-miles")
+                    if (convertionType.value == "km-miles")
                     {
                         factor = 0.621371;
                     }
-                    else if (convertionType == 'miles-km')
+                    else if (convertionType.value == 'miles-km')
                     {
                         factor = 1.60934; 
                     }
-                    else if (convertionType == 'feet-meter')
+                    else if (convertionType.value == 'feet-meter')
                     {
                         factor = 0.3048; 
                     }
-                    else if (convertionType == 'meter-feet')
+                    else if (convertionType.value == 'meter-feet')
                     {
                         factor = 3.28084; 
                     }
-                    else if (convertionType == 'cm-in')
+                    else if (convertionType.value == 'cm-in')
                     {
                         factor = 0.393701; 
                     }
