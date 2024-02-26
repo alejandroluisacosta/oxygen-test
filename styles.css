@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
-.converter-block
+#converter-block
 {
     width: 714px;
     height: 193px;
@@ -11,7 +11,7 @@
     border-radius: 21px;
 }
 
-h2
+#title-txt
 {
     color: #FFFFFF;
     margin-left: 38px;
@@ -47,7 +47,7 @@ select
     border-right: #FFFFFF;
 }
 
-.input
+#input
 {
     display: inline-block;
     margin-left: 80px;
@@ -59,10 +59,19 @@ input::-webkit-inner-spin-button { /* Turn off input increase/decrease arrows */
     margin: 0;
 }
 
-#input.val
+#input-val
 {
     background-color: #2E0039;
     display: inline-block;
+    background-color: #2E0039; border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    color: white;
+    font-family: "Poppins"; 
+    text-align: right;
+    font-size: 14px; 
+    width: 200px;
+    
 }
 
 #input-unit
@@ -73,7 +82,7 @@ input::-webkit-inner-spin-button { /* Turn off input increase/decrease arrows */
     display: inline-block;
 }
 
-.output
+#output
 {
     color: #FFFFFF;
     display: inline-block;

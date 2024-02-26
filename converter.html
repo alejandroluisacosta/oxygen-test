@@ -44,28 +44,27 @@
         </script>
     </head>
     <body>
-        <div class="converter-block">
-            <h2>convert</h2>
-            <div class="content">
+        <div id="converter-block">
+            <div id="title">
+                <h1 id="title-txt">convert</h1>
+            </div>
+            <div id="content">
                 <div id="dropdown">
                     <select id="convertion_type">
-                    <div class="dropdown-content">
-                    <option value="km-miles">km -> miles</option>
-                    <option value="miles-km">miles -> km</option>
-                    <option value="feet-meter">ft -> m</option>
-                    <option value="meter-feet">m -> ft</option>
-                    <option value="cm-in">cm -> in</option>
-                    <option value="in-cm">in -> cm</option>
-                    </div>
+                        <option value="km-miles">km -> miles</option>
+                        <option value="miles-km">miles -> km</option>
+                        <option value="feet-meter">ft -> m</option>
+                        <option value="meter-feet">m -> ft</option>
+                        <option value="cm-in">cm -> in</option>
+                        <option value="in-cm">in -> cm</option>
                     </select>
                 </div>
-                <div class="input">
-                    <!-- Check why styles.css not working on following element -->
-                    <input type="number" id="input-val" style="background-color: #2E0039; border-top: 1px; border-left: 1px; border-right: 1px; color: white; font-family: Poppins; text-align: right; font-size: 14px; width: 200px;" placeholder="100">
+                <div id="input">
+                    <input type="number" id="input-val" placeholder="100";>
                     <p id="input-unit">km</p>
                     <button id="button">convert</button>
                 </div>
-                <div class="output">
+                <div id="output">
                     <p id="output-val">62.12</p>
                     <p id="output-unit">miles</p>
                 </div>
